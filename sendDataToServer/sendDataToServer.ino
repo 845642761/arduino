@@ -17,6 +17,7 @@ void loop() {
   if (client.connected()) {
     sendTempToServer();  
   }else{
+    Serial.println("client lost the server; reconnecting...");
     initNetWork();
   }
   delay(10000);
